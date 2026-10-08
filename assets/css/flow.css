@@ -13,7 +13,7 @@
 .c1{left:0;top:1%;width:29%;height:30%}.c2{left:2%;top:34%;width:27%;height:30%}.c3{left:.5%;top:67%;width:28.5%;height:31%}
 .nd{position:absolute;left:35.8%;width:21.7%;height:10.2%;display:grid;place-items:center;border-radius:8px;font-weight:600;overflow:hidden}
 .n1{top:9.3%;background:var(--navy);color:#fff}.n2{top:39.5%;background:var(--tint);color:var(--navy);border:1px solid #C9D2E0}
-.sc{position:absolute;inset:0;transform:translateX(100%)}.sc:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#fff}
+.fx .sc{position:absolute;inset:0;transform:translateX(100%)}.fx .sc:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#fff}
 .chips{position:absolute;left:31%;top:21.4%;width:30.5%;display:flex;gap:.3em;justify-content:center}
 .chip{background:#fff;border:1px solid var(--ln);border-radius:6px;padding:.1em .5em;font-size:.85em;color:var(--tx2);white-space:nowrap}
 .chks{position:absolute;left:31%;top:51.6%;width:30.5%}
