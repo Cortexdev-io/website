@@ -9,22 +9,23 @@
 .fcb{height:100%;background:#fff;border:1px solid var(--ln);border-radius:8px;padding:.6em .7em;overflow:hidden;box-shadow:var(--sh)}
 .fh{display:flex;align-items:center;gap:.4em;font-weight:600;color:var(--navy);margin-bottom:.4em}
 .fi{width:1.3em;height:1.3em;fill:none;stroke:var(--navy);stroke-width:1.6;stroke-linejoin:round}
-.cl{font:400 .86em/1.5 "IBM Plex Mono",monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--tx2)}
+.fcb .cl{font:400 .86em/1.5 "IBM Plex Mono",monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--tx2)}
 .c1{left:0;top:1%;width:29%;height:30%}.c2{left:2%;top:34%;width:27%;height:30%}.c3{left:.5%;top:67%;width:28.5%;height:31%}
 .nd{position:absolute;left:35.8%;width:21.7%;height:10.2%;display:grid;place-items:center;border-radius:8px;font-weight:600;overflow:hidden}
 .n1{top:9.3%;background:var(--navy);color:#fff}.n2{top:39.5%;background:var(--tint);color:var(--navy);border:1px solid #C9D2E0}
 .sc{position:absolute;inset:0;transform:translateX(100%)}.sc:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#fff}
-.chips{position:absolute;left:33%;top:21.4%;width:31%;display:flex;gap:.3em;justify-content:center}
+.chips{position:absolute;left:31%;top:21.4%;width:30.5%;display:flex;gap:.3em;justify-content:center}
 .chip{background:#fff;border:1px solid var(--ln);border-radius:6px;padding:.1em .5em;font-size:.85em;color:var(--tx2);white-space:nowrap}
-.chks{position:absolute;left:33%;top:51.6%;width:31%}
+.chks{position:absolute;left:31%;top:51.6%;width:30.5%}
 .ck{display:flex;gap:.45em;align-items:center;background:#fff;border:1px solid var(--ln);border-radius:6px;padding:.3em .5em;margin-bottom:.35em;font-size:.95em;white-space:nowrap}
 .ck:before{content:"";width:.35em;height:.7em;border:solid var(--ac);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-.1em,-.1em);flex:none}
 .ck.dv,.bdg{background:#ECE8FA;color:#5B3FC4;border-color:#D8D0F5;font-weight:600}.ck.dv:before{content:"!";border:0;transform:none;width:auto;height:auto;font-weight:700}
 .tab{position:absolute;left:62.5%;top:3%;width:37.5%;background:#fff;border:1px solid var(--ln);border-radius:8px;overflow:hidden}
-.row{display:grid;grid-template-columns:1fr 3.6em 6.6em;gap:.4em;align-items:center;padding:.55em .6em;border-bottom:1px solid var(--ln);font-variant-numeric:tabular-nums}
-.row b{font-weight:500;text-align:right}.row small{display:block;font-size:.72em;color:var(--tx2)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 3.6em 7.8em;gap:.4em;align-items:center;padding:.55em .6em;border-bottom:1px solid var(--ln);font-variant-numeric:tabular-nums}
+.row b{font-weight:500;text-align:right;white-space:nowrap}.row small{display:block;font-size:.72em;color:var(--tx2)}
 .hd{background:var(--bg);color:var(--tx2);font-size:.8em;font-weight:600;padding:.4em .6em}.tot{background:var(--tint);color:var(--navy);font-weight:600;border-bottom:0}.tot b{font-weight:600}
 .bdg{position:absolute;left:62.5%;bottom:1%;width:37.5%;border:1px solid #D8D0F5;border-radius:6px;padding:.45em .6em;font-size:.88em}
+@media(min-width:1024px){.flow-wide{max-width:1160px}}
 .fl-ctl{display:flex;gap:8px;margin-top:10px}
 .fl-ctl button{font:500 .82rem Inter,sans-serif;color:var(--navy);background:#fff;border:1px solid #C9D2E0;border-radius:6px;padding:4px 12px;min-height:32px;cursor:pointer}.fl-ctl button:hover{border-color:var(--navy)}
 .flow-fig figcaption{font-size:.82rem;color:var(--tx2);margin-top:8px}
@@ -53,8 +54,8 @@
 @keyframes sl{from{opacity:0;transform:translateX(-16px)}}
 @media(max-width:720px){
 .fx{aspect-ratio:360/800}.fxi{font-size:max(10px,3.1cqw)}.tr-h{display:none}.tr-v{display:block}
-.c1,.c2,.c3{top:0;height:16%;width:31.5%}.c1{left:0}.c2{left:34.25%}.c3{left:68.5%}.cl:nth-child(4){display:none}
+.c1,.c2,.c3{top:0;height:16%;width:31.5%}.c1{left:0}.c2{left:34.25%}.c3{left:68.5%}.fcb .cl:nth-child(4){display:none}
 .nd{left:27.8%;width:44.4%;height:5.2%}.n1{top:22%}.n2{top:39%}
 .chips{left:5%;width:90%;top:28.5%}.chks{left:14%;width:72%;top:45%}
-.tab{left:0;width:100%;top:59%}.bdg{left:0;width:100%;bottom:auto;top:93%}}
+.tab{left:0;width:100%;top:57.5%}.bdg{left:0;width:100%;bottom:auto;top:93%}}
 @media(prefers-reduced-motion:reduce){.fx *{animation:none!important}.fl-ctl{display:none!important}}
