@@ -13,7 +13,7 @@ Site estático da Cortex Dev (cortexdev.io), em HTML, CSS e JavaScript puros. N�
 
 ## Publicação (Cloudflare Pages)
 1. Conecte este repositório ao Cloudflare Pages.
-2. Comando de build: nenhum. Diretório de saída: a raiz do repositório.
+2. Comando de build: `exit 0`. Diretório de saída: a raiz do repositório (`/`).
 3. Teste na URL `*.pages.dev` antes de ligar o domínio.
 
 ## config.js
