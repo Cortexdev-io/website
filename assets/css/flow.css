@@ -1,0 +1,60 @@
+.flow-fig{margin:0;width:100%;max-width:600px}
+.fx{position:relative;aspect-ratio:600/430;container-type:inline-size;width:100%}
+.fxi{position:absolute;inset:0;font-size:max(10px,1.85cqw);line-height:1.35;color:var(--tx)}
+.fxi>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.tr-v{display:none}
+.tr{fill:none;stroke:var(--navy);stroke-opacity:.4;stroke-width:1.5;stroke-dasharray:1;vector-effect:non-scaling-stroke}
+.pkt{fill:var(--navy);offset-rotate:auto;opacity:0}
+.fc{position:absolute;transform:rotate(var(--r))}
+.fcb{height:100%;background:#fff;border:1px solid var(--ln);border-radius:8px;padding:.6em .7em;overflow:hidden;box-shadow:var(--sh)}
+.fh{display:flex;align-items:center;gap:.4em;font-weight:600;color:var(--navy);margin-bottom:.4em}
+.fi{width:1.3em;height:1.3em;fill:none;stroke:var(--navy);stroke-width:1.6;stroke-linejoin:round}
+.cl{font:400 .86em/1.5 "IBM Plex Mono",monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--tx2)}
+.c1{left:0;top:1%;width:29%;height:30%}.c2{left:2%;top:34%;width:27%;height:30%}.c3{left:.5%;top:67%;width:28.5%;height:31%}
+.nd{position:absolute;left:35.8%;width:21.7%;height:10.2%;display:grid;place-items:center;border-radius:8px;font-weight:600;overflow:hidden}
+.n1{top:9.3%;background:var(--navy);color:#fff}.n2{top:39.5%;background:var(--tint);color:var(--navy);border:1px solid #C9D2E0}
+.sc{position:absolute;inset:0;transform:translateX(100%)}.sc:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#fff}
+.chips{position:absolute;left:33%;top:21.4%;width:31%;display:flex;gap:.3em;justify-content:center}
+.chip{background:#fff;border:1px solid var(--ln);border-radius:6px;padding:.1em .5em;font-size:.85em;color:var(--tx2);white-space:nowrap}
+.chks{position:absolute;left:33%;top:51.6%;width:31%}
+.ck{display:flex;gap:.45em;align-items:center;background:#fff;border:1px solid var(--ln);border-radius:6px;padding:.3em .5em;margin-bottom:.35em;font-size:.95em;white-space:nowrap}
+.ck:before{content:"";width:.35em;height:.7em;border:solid var(--ac);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-.1em,-.1em);flex:none}
+.ck.dv,.bdg{background:#ECE8FA;color:#5B3FC4;border-color:#D8D0F5;font-weight:600}.ck.dv:before{content:"!";border:0;transform:none;width:auto;height:auto;font-weight:700}
+.tab{position:absolute;left:62.5%;top:3%;width:37.5%;background:#fff;border:1px solid var(--ln);border-radius:8px;overflow:hidden}
+.row{display:grid;grid-template-columns:1fr 3.6em 6.6em;gap:.4em;align-items:center;padding:.55em .6em;border-bottom:1px solid var(--ln);font-variant-numeric:tabular-nums}
+.row b{font-weight:500;text-align:right}.row small{display:block;font-size:.72em;color:var(--tx2)}
+.hd{background:var(--bg);color:var(--tx2);font-size:.8em;font-weight:600;padding:.4em .6em}.tot{background:var(--tint);color:var(--navy);font-weight:600;border-bottom:0}.tot b{font-weight:600}
+.bdg{position:absolute;left:62.5%;bottom:1%;width:37.5%;border:1px solid #D8D0F5;border-radius:6px;padding:.45em .6em;font-size:.88em}
+.fl-ctl{display:flex;gap:8px;margin-top:10px}
+.fl-ctl button{font:500 .82rem Inter,sans-serif;color:var(--navy);background:#fff;border:1px solid #C9D2E0;border-radius:6px;padding:4px 12px;min-height:32px;cursor:pointer}.fl-ctl button:hover{border-color:var(--navy)}
+.flow-fig figcaption{font-size:.82rem;color:var(--tx2);margin-top:8px}
+.fx.armed:not(.is-playing) :is(.fc,.nd,.chip,.ck,.tab,.bdg){opacity:0}.fx.armed:not(.is-playing) .tr{stroke-dashoffset:1}
+.fx.is-paused *{animation-play-state:paused!important}
+.is-playing{--e:cubic-bezier(.2,.7,.2,1)}
+.is-playing .fc{animation:ci .5s var(--e) both}.is-playing .c2{animation-delay:.35s}.is-playing .c3{animation-delay:.7s}
+.is-playing .fcb{animation:fo .5s var(--e) both 1.5s}.is-playing .c2 .fcb{animation-delay:1.75s}.is-playing .c3 .fcb{animation-delay:2s}
+.is-playing .tr{animation:dr .9s var(--e) both}.is-playing .t2{animation-delay:1.45s}.is-playing .t3{animation-delay:1.7s}.is-playing .t1{animation-delay:1.2s}
+.is-playing .t4{animation-duration:.4s;animation-delay:2.9s}.is-playing .t5{animation-duration:.3s;animation-delay:4.3s}
+.is-playing .pkt{animation:pk .8s var(--e) both}.is-playing .k1{animation-delay:1.4s}.is-playing .k2{animation-delay:1.65s}.is-playing .k3{animation-delay:1.9s}
+.is-playing .n1{animation:po .45s var(--e) both 1s}.is-playing .sc{animation:sw .8s var(--e) both 2.3s}
+.is-playing .chip{animation:up .4s var(--e) both}.is-playing .chip:nth-child(1){animation-delay:2.6s}.is-playing .chip:nth-child(2){animation-delay:2.9s}.is-playing .chip:nth-child(3){animation-delay:3.2s}
+.is-playing .n2{animation:po .45s var(--e) both 3s}
+.is-playing .ck{animation:up .4s var(--e) both}.is-playing .ck:nth-child(1){animation-delay:3.5s}.is-playing .ck:nth-child(2){animation-delay:3.85s}.is-playing .ck:nth-child(3){animation-delay:4.2s}
+.is-playing .tab{animation:sl .4s var(--e) both 4.4s}
+.is-playing .row{animation:sl .4s var(--e) both;animation-delay:calc(4.6s + var(--i,0)*.12s)}.is-playing .hd{animation:none}
+.is-playing .bdg{animation:up .5s var(--e) both 6s}
+@keyframes ci{from{opacity:0;transform:translateX(-24px) rotate(var(--r))}}
+@keyframes fo{50%{transform:scale(.96,.8);opacity:.7}}
+@keyframes dr{from{stroke-dashoffset:1}}
+@keyframes pk{0%{offset-distance:0;opacity:0}15%,85%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@keyframes po{from{opacity:0;transform:scale(.9)}}
+@keyframes sw{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@keyframes up{from{opacity:0;transform:translateY(8px)}}
+@keyframes sl{from{opacity:0;transform:translateX(-16px)}}
+@media(max-width:720px){
+.fx{aspect-ratio:360/800}.fxi{font-size:max(10px,3.1cqw)}.tr-h{display:none}.tr-v{display:block}
+.c1,.c2,.c3{top:0;height:16%;width:31.5%}.c1{left:0}.c2{left:34.25%}.c3{left:68.5%}.cl:nth-child(4){display:none}
+.nd{left:27.8%;width:44.4%;height:5.2%}.n1{top:22%}.n2{top:39%}
+.chips{left:5%;width:90%;top:28.5%}.chks{left:14%;width:72%;top:45%}
+.tab{left:0;width:100%;top:59%}.bdg{left:0;width:100%;bottom:auto;top:93%}}
+@media(prefers-reduced-motion:reduce){.fx *{animation:none!important}.fl-ctl{display:none!important}}
