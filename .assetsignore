@@ -6,3 +6,16 @@ wrangler.jsonc
 check_links.py
 CORTEX_DEV_CLAUDE_CODE_MASTER_PROMPT_v2.md
 CORTEX_DEV_CLAUDE_CODE_ADDENDUM.md
+engine
+tests
+fixtures
+docs
+scripts
+pyproject.toml
+uv.lock
+.env
+.env.example
+.venv
+.pytest_cache
+__pycache__
+.gitignore
