@@ -48,7 +48,7 @@ class MockProvider:
         self._recordings = json.loads(recordings.read_text(encoding="utf-8-sig"))
 
     def extract_statement(self, text: str, filename: str) -> ExtractionResult:
-        digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+        digest = hashlib.sha256(text.replace("\r\n", "\n").encode("utf-8")).hexdigest()  # CRLF checkouts hash the same
         rec = self._recordings.get(digest)
         if rec is None:
             raise ProviderError(f"mock provider has no recording for {filename} (sha256 {digest[:12]}…)")
