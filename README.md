@@ -11,10 +11,8 @@ Site estático da Cortex Dev (cortexdev.io), em HTML, CSS e JavaScript puros. N�
 - `config.js`: chaves da demonstração
 - `_headers`, `robots.txt`, `sitemap.xml` e `404.html`
 
-## Publicação (Cloudflare Pages)
-1. Conecte este repositório ao Cloudflare Pages.
-2. Comando de build: `exit 0`. Diretório de saída: a raiz do repositório (`/`).
-3. Teste na URL `*.pages.dev` antes de ligar o domínio.
+## Publicação (Cloudflare Workers com assets estáticos)
+O site é publicado como um Worker chamado `cortexdev`, com `wrangler.jsonc` (`assets.directory` = `./`). Tudo na raiz é público, exceto o que está em `.assetsignore`. Toda pasta ou arquivo novo que não seja público deve entrar em `.assetsignore` no mesmo commit (`tests/test_repo_exposure.py` verifica isso).
 
 ## config.js
 - `demoPronta`: com `true`, a home mostra o selo "No ar" e o botão da demonstração; com `false`, mostra "Em desenvolvimento".
@@ -30,3 +28,25 @@ Site estático da Cortex Dev (cortexdev.io), em HTML, CSS e JavaScript puros. N�
 
 ## Dados
 Todos os dados da demonstração são fictícios. Nada aqui é recomendação de investimento.
+
+## Cortex Financial Engine (motor de conferência, fatia mínima)
+Estado: **em desenvolvimento, só local, só dados fictícios**. Não está publicado nem recebe arquivos de clientes.
+
+| Item | Estado |
+|---|---|
+| Leitura de CSV e XLSX no formato brasileiro (vírgula decimal, ponto de milhar, R$) | Feito, com testes |
+| Totais em `Decimal` e conciliação (divergência de R$ 600,00; consolidado R$ 149.025,00) | Feito, com testes |
+| Exportação CSV com proteção contra injeção de fórmulas | Feito, com testes |
+| Provedor de IA | Só simulado (`mock`); nenhuma chamada à API do Claude |
+| PDF, API web, login, banco de dados, avaliação com conjunto de referência | Não iniciado |
+
+Pastas: `engine/` (código), `fixtures/` (arquivos sintéticos), `tests/`, `scripts/`, `docs/`.
+As fixtures foram reconstruídas a partir da página `/demo/` (a pasta `demo_dados` não estava no repositório).
+
+### Rodar localmente (PowerShell)
+```powershell
+uv sync
+uv run pytest -q
+uv run python -m engine.cli demo
+```
+Não é preciso chave nem `.env`. Variáveis de limite estão em `.env.example` (padrões conservadores: gasto diário US$ 0, chave de bloqueio ligada).

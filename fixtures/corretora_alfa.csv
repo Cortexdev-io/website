@@ -1,0 +1,10 @@
+Corretora Alfa (fictícia) - Posição em custódia
+Cliente: Cliente Demo 001
+Data da posição: 06/10/2026
+
+Ativo;Qtde;Preço Médio (R$);Valor Total (R$)
+ALFA3;1.200;18,45;22.140,00
+BETA4;800;32,10;25.680,00
+DELT3;500;12,80;6.400,00
+
+Total em custódia (R$);;;54.220,00

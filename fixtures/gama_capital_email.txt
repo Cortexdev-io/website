@@ -1,0 +1,9 @@
+Assunto: Sua posição em custódia - 06/10/2026
+
+Segue a posição em custódia na Gama Capital (fictícia) em 06 de outubro de 2026, conta do Cliente Demo 001:
+
+- 400 ações SIGM3, preço médio R$ 21,90, o que dá R$ 8.760,00
+- 250 cotas de GAMA11, preço médio de R$ 104,00 (R$ 26.000,00)
+- 600 ações DELT3 com preço médio R$ 13,10, total de R$ 7.860,00
+
+Total em custódia: R$ 43.220,00
