@@ -1,9 +1,7 @@
 .git
-.github
 README.md
 wrangler.jsonc
 .assetsignore
-check_links.py
 CORTEX_DEV_CLAUDE_CODE_MASTER_PROMPT_v2.md
 CORTEX_DEV_CLAUDE_CODE_ADDENDUM.md
 engine
