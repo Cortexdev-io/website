@@ -20,3 +20,14 @@ Implemented today: only the live-label gate (`engine/provider.py: live_enabled`)
 
 ## Not covered yet
 Backend hosting, database, object storage, secrets store, domain `app.`/`api.` subdomains (need DNS approval), cost projections for the Claude API (no measured usage; measured cost so far US$ 0).
+
+## Release to production (prepared only; nothing has been done)
+**What changes on `main`:** `assets/css/style.css` (the `/demo/` overflow fix and a few new rules), `index.html` (homepage repositioning; copy pending founder approval in `docs/review-home-copy-diff.md`), and new non-public folders and files (`engine/`, `tests/`, `fixtures/`, `docs/`, `scripts/`, `pyproject.toml`, `uv.lock`, `.env.example`) all listed in `.assetsignore`. `.assetsignore` also drops two entries for files that do not exist.
+
+**What Cloudflare does on push:** the Worker `cortexdev` is deployed from `main`, so a push to `main` rebuilds and publishes it. This branch must not be pushed to `main` before approval.
+
+**Before merging:** founder approves the copy table; `uv run pytest -q` shows 46 passed; link checker shows no new problems (one pre-existing, inactive reference to `assets/img/demo-hero.png`, only loaded if `demoImagem` is true in `config.js`).
+
+**After release, measure** (Playwright, `scrollWidth` against `clientWidth`) on `https://cortexdev.io/demo/`: at 768 px and 800 px expect 768 and 800 (before: 952 on both); also 320, 390, 1024 and 1440 px unchanged. Check `/`, `/demo/resultado/`, `/privacidade/`, `/termos/` and the 404 page load without console errors, and that `https://cortexdev.io/engine/`, `/docs/`, `/fixtures/`, `/tests/`, `/pyproject.toml` and `/.env.example` return 404.
+
+**Rollback (only after the founder approves a push):** `git revert -m 1 <merge-commit>` on `main`, then `git push origin main`. Use `-m 1` only if the merge was a merge commit; for a fast-forward or squash, revert the commit range or the squash commit instead.
