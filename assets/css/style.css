@@ -132,3 +132,5 @@ details.q[open] summary:after{transform:none}
 .prose{max-width:760px}.prose h1{margin-bottom:8px}.prose h2{font-size:1.5rem;margin:36px 0 10px}.prose p,.prose li{color:var(--tx2)}.prose ul{padding-left:20px;display:grid;gap:6px;margin:10px 0}.prose p{margin-top:8px}.upd{font-size:.9rem}
 .card pre{font-size:.74rem}
 tr.div td{background:#ECE8FA;color:#5B3FC4;font-weight:600}
+.eyebrow{font-size:.85rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ac);margin:0 0 14px}
+.steps.prod strong{display:block;margin-bottom:6px}.steps.prod p{margin:0}@media(min-width:900px){.steps.prod{grid-template-columns:repeat(4,minmax(0,1fr))}}
