@@ -1,1 +1,1 @@
-window.CORTEX = { demoPronta: false, urlDemo: "/demo/resultado/", demoImagem: false };
+window.CORTEX = { demoPronta: true, urlDemo: "/demo/resultado/", demoImagem: false };
