@@ -5,3 +5,4 @@ CORTEX_DEV_CLAUDE_CODE_ADDENDUM.md
 __pycache__/
 .pytest_cache/
 *.pyc
+.wrangler
