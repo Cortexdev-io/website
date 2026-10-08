@@ -1,49 +1,32 @@
-# Demo: extratos em posição consolidada (dados fictícios)
+# Cortex Dev: site
 
-Demonstração da Cortex Dev. Três extratos de corretoras fictícias, em formatos diferentes (CSV, planilha e e-mail), são lidos pelo Claude e convertidos em um formato único. O código confere os totais e consolida a posição.
+Site estático da Cortex Dev (cortexdev.io), em HTML, CSS e JavaScript puros. Não há build nem dependências.
 
-**Todos os dados são fictícios.** Os tickers, as corretoras, os clientes e os preços são inventados. Não são cotações de mercado e não são recomendação de investimento.
+## Estrutura
+- `index.html`: home
+- `demo/index.html`: página que explica a demonstração
+- `demo/resultado/index.html`: registro estático da demonstração (dados fictícios)
+- `privacidade/` e `termos/`: páginas legais
+- `assets/`: CSS, JavaScript e imagens
+- `config.js`: chaves da demonstração
+- `_headers`, `robots.txt`, `sitemap.xml` e `404.html`
 
-## O que tem aqui
+## Publicação (Cloudflare Pages)
+1. Conecte este repositório ao Cloudflare Pages.
+2. Comando de build: nenhum. Diretório de saída: a raiz do repositório.
+3. Teste na URL `*.pages.dev` antes de ligar o domínio.
 
-- `exemplos/01_corretora_alfa.csv`: extrato em CSV, com vírgula decimal e datas dd/mm/aaaa.
-- `exemplos/02_beta_invest.xlsx`: planilha com cabeçalhos em inglês e datas ISO.
-- `exemplos/03_gama_email.txt`: extrato em texto de e-mail. Um total declarado diverge da soma das posições, de propósito, para o código sinalizar.
-- `prompt_extracao.txt`: o prompt enviado ao Claude para a leitura.
-- `gabarito.json`: os valores esperados, para conferir o resultado. Não envie este arquivo ao Claude.
+## config.js
+- `demoPronta`: com `true`, a home mostra o selo "No ar" e o botão da demonstração; com `false`, mostra "Em desenvolvimento".
+- `demoImagem`: com `true`, usa `assets/img/demo-hero.png`; com `false`, usa a tabela de exemplo em CSS.
+- `urlDemo`: endereço da demonstração.
 
-## Como a demo funciona
+## Antes de publicar
+- [ ] `demo/resultado/index.html` presente, com custo total de R$ 149.025,00 e divergência de R$ 600,00 na Gama.
+- [ ] `assets/img/og-image.png` é um PNG de verdade.
+- [ ] Todos os links do menu, do rodapé e do WhatsApp funcionam.
+- [ ] Páginas legais revisadas por profissional jurídico.
+- [ ] E-mail testado depois de qualquer mudança de DNS.
 
-1. **Leitura (Claude):** o Claude recebe os três arquivos e devolve um JSON no formato único definido em `prompt_extracao.txt`.
-2. **Conferência (código):** o código compara o total declarado com a soma das posições e refaz quantidade × preço médio de cada linha.
-3. **Consolidação (código):** posição por ativo, por corretora e por setor fictício, com custo total.
-4. **Resumo e perguntas (Claude):** o Claude recebe apenas os números já calculados e escreve o resumo. Ele não faz contas.
-
-Valores esperados (para conferência):
-- Custo total: R$ 149.025,00
-- Divergência esperada: Gama Capital, R$ 600,00 (total declarado R$ 43.220,00; soma das posições R$ 42.620,00)
-
-## Como executar
-
-A leitura roda dentro do claude.ai, na página da demonstração. Não há servidor nem chave de API neste repositório.
-
-1. Abra a página da demonstração no claude.ai.
-2. Clique em **Usar os 3 arquivos de exemplo** e depois em **Ler com o Claude**.
-3. Confira o resultado com os valores acima.
-4. Exporte o snapshot em HTML, se quiser.
-
-A leitura usa o limite de uso do Claude do seu plano.
-
-## Sobre o resultado publicado
-
-O snapshot publicado no site é um registro estático de uma execução real, com os mesmos dados fictícios. Ele não chama o Claude de novo. Se a demonstração for alterada, o snapshot precisa ser gerado novamente.
-
-## Limitações
-
-- A leitura é feita pelo Claude e pode errar. Por isso há conferência por código e campos de dúvida sinalizados.
-- Não há integração com corretoras reais, nem armazenamento de dados.
-- Não use dados reais de clientes com esta demonstração.
-
-## Licença
-
-Uso livre para leitura e estudo. Os arquivos de exemplo são fictícios e podem ser reutilizados sem restrição.
+## Dados
+Todos os dados da demonstração são fictícios. Nada aqui é recomendação de investimento.
